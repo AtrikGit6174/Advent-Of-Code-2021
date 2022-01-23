@@ -7,7 +7,8 @@ struct S
     int sum;
     vector<int> rows;
     vector<int> cols;
-    //bool won;
+    bool won;
+	//all code parts related to bool won are rquired in the 4-2, and are optional in 4-1
     
     S()
     {
@@ -15,7 +16,7 @@ struct S
         rows= count;
         cols= count;
         
-        //won= false;
+        won= false;
     }
 };
 
@@ -118,7 +119,7 @@ int main()
     	                    if (item.rows[i]==5 or item.cols[j]==5)
     	                    {
     	                        cout<<"\nanswer= "<<item.sum * num;
-    	                        //item.won= true;
+    	                        item.won= true;
                                 //only first output is required hence exit
     	                        exit(0);
     	                    }
