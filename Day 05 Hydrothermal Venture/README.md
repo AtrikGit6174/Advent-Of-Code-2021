@@ -1,10 +1,5 @@
-Day 05 Hydrothermal Venture
-<<<<<<< Updated upstream
-1. For 5-1, notice that the input contains horizontal, vertical and diagonal lines.
-2. 
-```
-while (std::cin) 
-=======
+<h1>Day 05 Hydrothermal Venture</h1>
+
 Logic used: 
 ```
 for (each line segment)
@@ -16,12 +11,12 @@ for (each line segment)
 }
 output the number of points which are crossed more than once.
 ```
-Better logic (unused):
-note only the common points by calculating the lines and noting the line segments conditions. Requires lots of code.
+Better logic (unused): <br />
+`note only the common points by calculating the lines and noting the line segments conditions. Requires lots of code.`
 
 1. For 5-1, 
-`while (std::cin) 
->>>>>>> Stashed changes
+```
+while (std::cin) 
 {
 	int x1, y1, x2, y2;
 	std::cin >> x1;
@@ -38,7 +33,7 @@ note only the common points by calculating the lines and noting the line segment
 
 This will make it insensitive to the ending newlines.
 
-3. Using 
+2. Using 
 ```
 while (getline(cin, str1))
 {
@@ -52,6 +47,7 @@ while (getline(cin, str1))
 makes the code sensitive to ending newlines in the standard input.
 
 Like, CodeChef IDE with C++14 GCC 6.3 and C++17 GCC 9.1 requires a newline for every getline.
-JDoodle IDE with GCC 11.1.0 does not.
+<br />JDoodle IDE with GCC 11.1.0 does not.
 
-While using this second piece of code for input, make sure to keep the re-declare the stringstream object with every iteration. Else, as I had encountered, due to some buffer facilities, only one line of input is being accepted.
+While using this second piece of code for input, make sure to re-declare the stringstream object with every iteration. 
+<br />Else, as I had encountered, due to some buffer facilities, only one line of input is being accepted.
