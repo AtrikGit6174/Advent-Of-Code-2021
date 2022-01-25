@@ -14,7 +14,8 @@ output the number of points which are crossed more than once.
 Better logic (unused): <br />
 `note only the common points by calculating the lines and noting the line segments conditions. Requires lots of code.`
 
-1. For 5-1, 
+1. For 5-1, notice that the input contains horizontal, vertical and diagonal lines.
+2. Using
 ```
 while (std::cin) 
 {
@@ -31,9 +32,9 @@ while (std::cin)
 }
 ```
 
-This will make it insensitive to the ending newlines.
+makes the code insensitive to the ending newlines.
 
-2. Using 
+3. Using 
 ```
 while (getline(cin, str1))
 {
