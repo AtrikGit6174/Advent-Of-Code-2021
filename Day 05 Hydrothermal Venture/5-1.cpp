@@ -5,10 +5,9 @@ using namespace std;
 
 int main() 
 {
-	// your code goes here
 	string str1, str2, str3;
 	map <pair<int, int>, int> mp;
-	int count= 0;
+	
 	while (cin) 
 	{
 		int x1, y1, x2, y2;
@@ -22,7 +21,7 @@ int main()
 		cin.ignore(1); // ","
 		cin >> y2;
 	    
-	    if (x1 == x2)
+	    if (x1 == x2)   //x=c
 	    {
 	        auto mini= min(y1, y2);
 	        auto p= make_pair(x1, mini);
@@ -30,13 +29,11 @@ int main()
 	        while (p.second<=maxi)
 	        {
 	            mp[p]++;
-	            if (mp[p] == 2)
-	                count++;
 	            p.second++;
 	        }
 	    }
 	    
-	    else if (y1 == y2)
+	    else if (y1 == y2)  //y=c
 	    {
 	        auto mini= min(x1, x2);
 	        auto p= make_pair(mini, y1);
@@ -44,11 +41,9 @@ int main()
 	        while (p.first<=maxi)
 	        {
 	            mp[p]++;
-	            if (mp[p] == 2)
-	                count++;
 	            p.first++;
 	        }
-	    }
+	    } 
 	}
 	
 	/*
@@ -59,6 +54,13 @@ int main()
 	    cout<<i.first.first<<", "<<i.first.second<<" : "<<i.second<<"\n";
 	}
 	*/
+	
+	int count= 0;
+	for (auto i:mp)
+	{
+	    if (i.second > 1)
+	        count++;
+	}
 	cout<<count;
 	return 0;
 }

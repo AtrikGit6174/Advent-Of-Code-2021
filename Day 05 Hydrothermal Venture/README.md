@@ -1,8 +1,27 @@
 Day 05 Hydrothermal Venture
+<<<<<<< Updated upstream
 1. For 5-1, notice that the input contains horizontal, vertical and diagonal lines.
 2. 
 ```
 while (std::cin) 
+=======
+Logic used: 
+```
+for (each line segment)
+{
+	for (each point in segment)
+	{
+		store in map, point: no of times it is crossed.
+	}
+}
+output the number of points which are crossed more than once.
+```
+Better logic (unused):
+note only the common points by calculating the lines and noting the line segments conditions. Requires lots of code.
+
+1. For 5-1, 
+`while (std::cin) 
+>>>>>>> Stashed changes
 {
 	int x1, y1, x2, y2;
 	std::cin >> x1;
