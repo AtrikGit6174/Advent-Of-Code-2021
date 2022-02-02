@@ -1,0 +1,2 @@
+Day 06 Lanternfish
+1. 6-2 was solved using Python3 as support for large integers is tricky in C++. To implement in C++, we have to use strings or vector<char> in case we implement in the same approach as 6-2.py shows.
